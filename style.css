@@ -595,6 +595,7 @@ textarea{
 .emailForm button{
     padding: 10px 20px;
     font-size: 18px;
+    cursor: pointer;
 }
 .emailForm button a{
     color: rgb( 166, 0, 70 );
