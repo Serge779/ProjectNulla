@@ -6,7 +6,8 @@ html{scroll-behavior: smooth;}
 }
 
 body{
-    font-family: "Times New Roman";
+    font-family: sans-serif;
+    background: white;
 }
 header,main,footer{
     max-width: 1400px;
@@ -79,7 +80,6 @@ nav{
     background-size: cover;
     background-position: center;
     height: 620px;
-    font-family: sans-serif;
 }
 .banner p{
     position: absolute;
@@ -113,7 +113,6 @@ nav{
 
 .products h3{
     font-size: 40px;
-    font-family: "Effra";
     color: rgb( 36, 68, 82 );
     text-align: center;
 }
@@ -169,7 +168,6 @@ nav{
 .products .tshirtDiv .grayTShirt p{
     position: absolute;
     font-size: 16px;
-    font-family: "Bernard MT Condensed";
     color: rgb( 0, 0, 0 );
     text-transform: uppercase;
     line-height: 1.455;
@@ -203,7 +201,6 @@ nav{
 }
 .products .tshirtDiv .whiteTShirt p{
     font-size: 15px;
-    font-family: "Impact";
     color: rgba( 0, 0, 0, 0.8 );
     text-transform: uppercase;
     line-height: 1.108;
@@ -323,6 +320,7 @@ nav{
 .idea p, .earn p{
     width: 62%;
     text-align: center;
+    line-height: 25px;
 }
 
 .idea button, .earn button{
@@ -356,8 +354,6 @@ nav{
     height: 100%;
     position: absolute;
     z-index: -1;
-    -webkit-filter: blur(4px);
-    filter: blur(4px);
 }
 .blog,.popular{
     width: 440px;
@@ -446,6 +442,8 @@ nav{
     align-items: center;
 }
 .box{
+    background: url(images/Rectangle\ 22.png);
+    background-size: cover;
     position: relative;
     width: 780px;
     padding: 30px 0;
@@ -453,17 +451,27 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0px 0px 7px 0px;
 }
+
 .corb{
-    background: url(images/Corp\ Border.png);
+    height: 20px;
+    max-width: 760px;
+    margin-top: -30px;
+}
+.corb img{
+    width: 100%;
+    height: 100%;
+}
+.shadow{
+    background: url(images/shadow-2.png);
     background-size: cover;
     width: 100%;
-    height: 20px;
+    height: 40px;
     position: absolute;
-    top: 0;
+    bottom: -41px;
+    opacity: .5;
 }
-.box img {
+.box > img {
     margin-bottom: 25px;
     transform: scale(.8);
 }
@@ -475,16 +483,23 @@ nav{
     transform: matrix( 0.6796511627907,0,0,0.68023255813953,0,0);
 }
 .box p{
-    font-size: 34.103px;
+    font-size: 28px;
     color: rgb( 51, 51, 51 );
     line-height: 1.5;
     text-align: center;
     transform: matrix( 0.6796511627907,0,0,0.68023255813953,0,0);
-} 
+}
+.box p span:nth-of-type(1){
+    font-weight: 700;
+}
+.box p span:nth-of-type(2){
+    color: rgb( 166, 0, 70 );
+}
 .box a{
     color: rgb( 166, 0, 70 );
     text-decoration: underline;
     font-size: 20px;
+    z-index: 0;
 }
 .instaFeed{
     padding: 30px 0;
@@ -530,7 +545,6 @@ nav{
 } 
 .instaFeed a{
     background-image: linear-gradient( 90deg, rgb(163,0,43) 0%, rgb(174,0,77) 100%);
-    font-family: "Effra";
     padding: 7px 20px;
     display: flex;
     align-items: center;
@@ -546,7 +560,7 @@ nav{
     background: url(images/article2.png);
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -564,12 +578,17 @@ nav{
 }
 .emailForm ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 100%;
     padding-top: 35px;
 }
-
+.emailForm ul li:nth-of-type(2){
+    margin: 0 30px;
+}
+.emailForm ul li:nth-of-type(3){
+    margin-right: 30px;
+}
 .emailForm form{
     display: flex;
     flex-direction: column;
@@ -593,11 +612,11 @@ textarea{
     width: 400px;
     height: 145px;
 }
-.emailForm button{
-    padding: 10px 20px;
-    font-size: 18px;
-}
-.emailForm button a{
+.emailForm > a{
+    background: #FFFFFF;
+    font-weight: 600;
+    padding: 15px 50px;
+    border-radius: 5px;
     color: rgb( 166, 0, 70 );
 }
 .group1{padding: 35px 0;}
@@ -607,25 +626,89 @@ textarea{
     align-content: center;
 }
 .group1 > div > div{
-    width: 120px;
-    margin: 0 5px;
+    width: 150px;
 }
-.group1 > div > div:nth-of-type(3){
-    background: url(images/paypal_new.png);
-    background-size: cover;
-    width: 300px;
-    height: 110px;
+.group1 .doIt{ margin: 0px 45px;}
+.group1 .learn ul li a,.group1 .doIt ul li a{
+    font-size: 12px;
+    color: black;
 }
-.group1 > div > div span{font-weight: bold;}
-.group1 > div > div p{
+.group1 .learn ul li:nth-of-type(1),.group1 .doIt ul li:nth-of-type(1){
     font-size: 15px;
+    font-weight: 700;
 }
-.group1 > div > div p:nth-of-type(1){margin-top: 5px;}
-.group2{
-    height: 200px;
+.group1 .learn ul li,.group1 .doIt ul li{
+    margin: 2px 0;
 }
-.group2 img{
+.group1 .paypal{
+    width: 290px
+}
+.group1 .paypal img{
     width: 100%;
+}
+
+.fooDivImg {
+    display: flex;
+    background: #113D53;
+}
+.fooContent {
+    background: #113D53;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fooContent > div{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.fooContent > div > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 21px;
+}
+.fooContent i{
+    font-size: 25px;
+    margin-right: 10px;
+}
+.fooContent > div > div:nth-of-type(2) i{
+    transform: rotate(125deg);
+    margin-right: 1px;
+}
+.fooContent > div > div > div{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+.fooDivImg .red{
+    clip-path: polygon(0 0, 89% 0, 100% 100%, 0 100%);
+    background: #A60046;
+    height: 100%;
+    width: 450px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fooDivImg .red img{
+    transform: scale(.8);
+}
+.fooDivImg .red::after{
+    content: '';
+    background: white;
+    position: absolute;
+    right: 5px;
+    top: -10px;
+    width: 8px;
+    height: 300px;
+    transform: rotate(-11deg);
+}
+.fooDivImg .red, .fooDivImg .fooContent{
+    height: 180px;
 }
 .footerDiv{
     display: flex;
@@ -634,12 +717,19 @@ textarea{
     height: 90px;
 }
 
-#one:hover ~ nav a[href="#one"],
-#two:hover ~ nav a[href="#two"],
-#three:hover ~ nav a[href="#three"],
-#four:hover ~ nav a[href="#four"]{
-    background: red;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 992px){
     .ideaEarn {
@@ -706,6 +796,7 @@ textarea{
     }
     .gift{
         height: auto;
+        padding: 50px 0;
     }
     .box h3{
         font-size: 30px;
@@ -731,8 +822,12 @@ textarea{
         flex-direction: column;
         width: 100%;
     }
-    .emailForm ul li{
-        margin: 5px 0;
+    .emailForm ul li:nth-of-type(2){
+        margin: 15px 0;
+    }
+    .emailForm ul li:nth-of-type(3){
+        margin-right: 0;
+        margin-bottom: 15px;
     }
     .emailForm form input, textarea{
         width: 280px;
@@ -744,10 +839,41 @@ textarea{
         flex-direction: column;
         align-items: center;
     }
-    .group1 > div > div:nth-of-type(3) {
-        width: 300px;
+    .group1 > div > div{
+        width: 290px;
+    }
+    .group1 .doIt {
+        margin: 25px 0px;
+    }
+    .group1 .learn ul,.group1 .doIt ul{
+        text-align: center;
+    }
+    .group1 .learn ul li,.group1 .doIt ul li{
+        margin: 5px 0;
+    }
+    .fooDivImg {
+        flex-direction: column;
+    }
+    .fooDivImg .red {
+        clip-path: none;
+        width: 100%;
+       
+    }
+    .fooDivImg .red::after{
+        content: none;
     }
     .footerDiv {
         flex-direction: column;
+    }
+    .footerDiv p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 590px){
+    .fooContent > div {
+        flex-direction: column;
+    }
+    .fooContent > div > div:nth-of-type(2) i{
+        margin: 30px 0;
     }
 }
